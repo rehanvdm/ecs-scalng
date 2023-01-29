@@ -1,0 +1,24 @@
+{
+  "name": "ecs-scalng",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-watch": "tsc -w",
+    "diff": "cdk diff -c region=us-east-1 -c account=YOUR_AWS_ACCOUNT_NUMBER --profile YOUR_AWS_PROFILE_NAME",
+    "build": "tsc",
+    "deploy": "tsc && cdk deploy -c region=us-east-1 -c account=YOUR_AWS_ACCOUNT_NUMBER --profile YOUR_AWS_PROFILE_NAME --require-approval never",
+    "destroy": "tsc && cdk destroy -c region=us-east-1 -c account=YOUR_AWS_ACCOUNT_NUMBER * --profile YOUR_AWS_PROFILE_NAME",
+    "load-test": "node_modules/.bin/artillery run ./test/load/fibonacci.yml"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.11.18",
+    "artillery": "^2.0.0-29",
+    "aws-cdk": "2.62.0",
+    "aws-cdk-lib": "2.62.0",
+    "constructs": "^10.1.231",
+    "typescript": "^4.9.4"
+  }
+}

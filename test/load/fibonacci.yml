@@ -1,0 +1,10 @@
+config:
+  target: 'http://ecs-s-servi-k9gzxz9020c6-1162560840.us-east-1.elb.amazonaws.com'
+  phases:
+  # Tow new visits every second for 24 hours
+  - duration: 86400
+    arrivalRate: 5
+scenarios:
+  - flow:
+    - get:
+        url: "/fibonacci.php"

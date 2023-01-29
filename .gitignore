@@ -1,0 +1,13 @@
+*.js
+!jest.config.js
+*.d.ts
+
+!deploy/**/*.js
+!tests/**/*.js
+
+*.js.map
+.npmrc
+
+node_modules
+dist
+cdk.out
